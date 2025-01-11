@@ -3,7 +3,7 @@ pessoas = []
 maior = menor = 0 
 
 while True:
-    dados.append(str(input("Nome:")))
+    dados.append((input("Nome:")))
     dados.append(float(input("Peso:")))
     if len(pessoas) == 0:
         maior = menor = dados[1]
@@ -21,12 +21,13 @@ while True:
 print(pessoas)
 
 print(f"Foram cadastradas {len(pessoas)} pessoas")
+
 print(f"O maior peso foi de {maior}kg. Peso de ", end='')
 for pessoa in pessoas: 
     if pessoa[1] == maior:
         print(f"[{pessoa[0]}] ", end='')
-print()
-print(f"O menor peso foi de {maior}kg. Peso de", end='')
+
+print(f"\nO menor peso foi de {menor}kg. Peso de ", end='')
 for pessoa in pessoas: 
     if pessoa[1] == menor:
         print(f"[{pessoa[0]}] ", end='')
